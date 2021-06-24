@@ -27,6 +27,16 @@
 .App-link {
   color: #61dafb;
 }
+.h1{
+  text-align: center;
+  color: blue;
+  font-family: 'Arial Narrow Bold';
+  font-size: 40px;
+}
+.list1{
+  vertical-align: auto;
+}
+
 
 @keyframes App-logo-spin {
   from {
