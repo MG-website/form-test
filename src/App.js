@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './App.css';
-import Mapeado from "./Mapeado.jsx";
-import Forms from "./Forms.jsx"
+import { Route } from "react-router-dom";
+import Mapeado from "./components/Mapeado.jsx";
+import Forms from "./components/Forms.jsx"
 
 
 function App() {
@@ -77,12 +78,17 @@ function App() {
       }
       return (
         <div>
-        <Forms  handleChange={handleChange} datos={datos} handleSubmit={handleSubmit} btn={btn} titulo={"REGISTRARSE"}/>
-        <Mapeado list={list} handleClick={handleClick} handleModif={handleModif}/>
-        {modf.Nombres!== "" ? 
-        <Forms handleChange={handleChangeModf} datos={modf} handleSubmit={handleSubmitModf} btn={btn} titulo={"MODIFICAR"}/>
-        : null}
+        <Route exact path="/" render={()=><Forms  handleChange={handleChange} datos={datos} handleSubmit={handleSubmit} btn={btn} titulo={"REGISTRARSE"}/>}></Route>
+        <Route path="/mapeado" render={()=><Mapeado list={list} handleClick={handleClick} handleModif={handleModif}/>}></Route>
+        <Route path="/modificar" render={()=><Forms handleChange={handleChangeModf} datos={modf} handleSubmit={handleSubmitModf} btn={btn} titulo={"MODIFICAR"}/>}></Route>
         </div>
+        // <div>
+        // <Forms  handleChange={handleChange} datos={datos} handleSubmit={handleSubmit} btn={btn} titulo={"REGISTRARSE"}/>
+        // <Mapeado list={list} handleClick={handleClick} handleModif={handleModif}/>
+        // {modf.Nombres!== "" ? 
+        // <Forms handleChange={handleChangeModf} datos={modf} handleSubmit={handleSubmitModf} btn={btn} titulo={"MODIFICAR"}/>
+        // : null}
+        // </div>
         // <div>
         //     <h1 >FORMULARIO</h1>
         //     <form onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off" >
