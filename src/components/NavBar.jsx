@@ -47,7 +47,7 @@ export default function TextButtons() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="div">
       <Link to="/">
       <Button color="secondary">REGISTRARSE</Button>
           </Link>

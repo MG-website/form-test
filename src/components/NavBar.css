@@ -1,6 +1,7 @@
-.Nav{
+#div{
     display: flex;
     justify-content: space-evenly;
+    background-color: aqua;
 }
 .btn{
     color: black;
