@@ -3,6 +3,7 @@ import './App.css';
 import { Route } from "react-router-dom";
 import Mapeado from "./components/Mapeado.jsx";
 import Forms from "./components/Forms.jsx"
+import NavBar from "./components/NavBar";
 
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
       }
       return (
         <div>
+        <Route path="/" render={()=><NavBar list={list} />}></Route>
         <Route exact path="/" render={()=><Forms  handleChange={handleChange} datos={datos} handleSubmit={handleSubmit} btn={btn} titulo={"REGISTRARSE"}/>}></Route>
         <Route path="/mapeado" render={()=><Mapeado list={list} handleClick={handleClick} handleModif={handleModif}/>}></Route>
         <Route path="/modificar" render={()=><Forms handleChange={handleChangeModf} datos={modf} handleSubmit={handleSubmitModf} btn={btn} titulo={"MODIFICAR"}/>}></Route>
