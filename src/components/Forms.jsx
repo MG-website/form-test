@@ -21,7 +21,7 @@ export default function Forms({handleChange, datos, handleSubmit, btn, titulo}){
         <div>
             <h1 class="title" >{titulo}</h1>
             <form onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off" >
-                <TextField label="Nombre" value={datos.Nombres} name="Nombres" type="text"  onChange={handleChange} />
+                <TextField label="Nombre" value={datos.Nombres} name="Nombres" type="text" onChange={handleChange} />
                 <TextField label="Apellidos" value={datos.Apellidos} name="Apellidos" type="text"  onChange={handleChange}/>
                 <TextField label="Correo" value={datos.Correo} name="Correo" type="text"  onChange={handleChange}/>
                 <TextField label="Celular" value={datos.Celular} name="Celular" type="number"  onChange={handleChange} />

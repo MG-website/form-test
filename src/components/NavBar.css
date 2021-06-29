@@ -1,10 +1,8 @@
-#div{
+.Tabs{
     display: flex;
     justify-content: space-evenly;
     background-color: aqua;
 }
-.btn{
-    color: black;
-    font-weight: bold;
-    font-size: medium;
+.Tab{
+    text-decoration: none;
 }
